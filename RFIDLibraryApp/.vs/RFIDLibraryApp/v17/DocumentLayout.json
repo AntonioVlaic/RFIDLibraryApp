@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|c:\\users\\antea\\source\\repos\\rfidlibraryapp\\rfidlibraryapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|solutionrelative:rfidlibraryapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|c:\\users\\antea\\source\\repos\\rfidlibraryapp\\rfidlibraryapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|solutionrelative:rfidlibraryapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|c:\\users\\antea\\source\\repos\\rfidlibraryapp\\rfidlibraryapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5A33B76-10A3-4648-BEDD-7A0968CE1E9D}|RFIDLibraryApp\\RFIDLibraryApp.csproj|solutionrelative:rfidlibraryapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "RFIDLibraryApp\\MainForm.cs",
+              "ToolTip": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\MainForm.cs",
+              "RelativeToolTip": "RFIDLibraryApp\\MainForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:19:12.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\Program.cs",
+              "RelativeDocumentMoniker": "RFIDLibraryApp\\Program.cs",
+              "ToolTip": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\Program.cs",
+              "RelativeToolTip": "RFIDLibraryApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:18:11.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\MainForm.cs",
+              "RelativeDocumentMoniker": "RFIDLibraryApp\\MainForm.cs",
+              "ToolTip": "C:\\Users\\antea\\source\\repos\\RFIDLibraryApp\\RFIDLibraryApp\\MainForm.cs [Design]",
+              "RelativeToolTip": "RFIDLibraryApp\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:18:05.828Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

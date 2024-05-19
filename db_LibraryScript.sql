@@ -1,0 +1,303 @@
+CREATE DATABASE Library
+GO
+USE Library
+
+GO
+
+CREATE TABLE Author 
+(
+	IDAuthor INT PRIMARY KEY IDENTITY,
+	AuthorName NVARCHAR (50) NOT NULL
+)
+GO
+
+
+CREATE TABLE Book 
+(
+	IDBook INT PRIMARY KEY IDENTITY,
+	Title NVARCHAR(50) ,
+	AuthorID INT FOREIGN KEY REFERENCES Author(IDAuthor),
+	Description NVARCHAR(MAX),
+)
+GO
+
+
+CREATE PROCEDURE createBook
+	@Title NVARCHAR(50),
+	@AuthorID INT,
+	@Description NVARCHAR(MAX),
+	@IDBook INT OUTPUT
+AS 
+BEGIN                 
+	INSERT INTO Book VALUES(@Title, @AuthorID, @Description)
+	SET @IDBook = SCOPE_IDENTITY()
+END
+GO
+
+CREATE PROCEDURE updateBook
+	@Title NVARCHAR(50),
+	@AuthorID INT,
+	@Description NVARCHAR(MAX),
+	@IDBook INT
+	 
+AS 
+BEGIN 
+	UPDATE Book SET 
+		Title = @Title, 
+		AuthorID = @AuthorID, 
+		Description = @Description
+	WHERE 
+		IDBook = @IDBook
+END
+GO
+
+
+CREATE PROCEDURE deleteBook
+	@IDBook INT	 
+AS 
+BEGIN 
+	DELETE  
+	FROM 
+			Book
+	WHERE 
+		IDBook = @IDBook
+END
+GO
+
+CREATE PROCEDURE selectBook
+	@IDBook INT
+AS 
+BEGIN 
+	SELECT 
+		* 
+	FROM 
+		Book
+	WHERE 
+		IDBook = @IDBook
+END
+GO
+
+CREATE PROCEDURE selectBooks
+AS
+BEGIN 
+SELECT * FROM Book
+END
+GO
+
+CREATE TABLE Tag_RFID
+(
+	IDTag_RFID INT PRIMARY KEY IDENTITY,
+	Tag NVARCHAR(50) NOT NULL,
+	
+)
+
+GO
+
+CREATE PROCEDURE createTag_RFID
+	@Tag NVARCHAR(50),
+	@IDTag_RFID INT OUTPUT
+AS 
+BEGIN
+	INSERT INTO Tag_RFID VALUES(@Tag)
+	SET @IDTag_RFID = SCOPE_IDENTITY()
+END
+GO
+
+CREATE PROCEDURE updateTag_RFID 
+	@Tag NVARCHAR(50),
+	@IDTag_RFID INT
+	 
+AS 
+BEGIN 
+	UPDATE Tag_RFID SET 
+		Tag = @Tag
+	WHERE 
+		IDTag_RFID = @IDTag_RFID
+END
+GO
+
+
+CREATE PROCEDURE deleteTag_RFID
+	@IDTag_RFID INT	 
+AS 
+BEGIN 
+	DELETE  
+	FROM 
+			Tag_RFID
+	WHERE 
+		IDTag_RFID = @IDTag_RFID
+END
+GO
+
+CREATE PROCEDURE selectTag_RFID
+	@IDTag_RFID INT
+AS 
+BEGIN 
+	SELECT 
+		* 
+	FROM 
+			Tag_RFID
+	WHERE 
+		IDTag_RFID = @IDTag_RFID
+END
+GO
+
+CREATE PROCEDURE selectTag_RFIDs
+AS
+BEGIN 
+SELECT * FROM Tag_RFID
+END
+GO
+
+
+
+CREATE TABLE BookTag
+(
+	IDBookTag INT PRIMARY KEY IDENTITY,
+	BookID INT FOREIGN KEY REFERENCES Book(IDBook),
+	TagID INT FOREIGN KEY REFERENCES Tag_RFID(IDTag_RFID)
+)
+
+GO
+
+CREATE PROCEDURE createBookTag
+	@BookID INT,
+	@TagID INT,
+	@IDBookTag INT OUTPUT
+AS 
+BEGIN
+	INSERT INTO BookTag VALUES(@BookID, @TagID)
+	SET @IDBookTag = SCOPE_IDENTITY()
+END
+GO
+
+CREATE PROCEDURE updateBookTag 
+	@BookID INT,
+	@TagID INT,
+	@IDBookTag INT
+	 
+AS 
+BEGIN 
+	UPDATE BookTag SET 
+		BookID = @BookID,
+		TagID = @TagID
+	WHERE 
+		IDBookTag = @IDBookTag
+END
+GO
+
+
+CREATE PROCEDURE deleteBookTag
+	@IDBookTag INT	 
+AS 
+BEGIN 
+	DELETE  
+	FROM 
+			BookTag
+	WHERE 
+		IDBookTag = @IDBookTag
+END
+GO
+
+CREATE PROCEDURE selectBookTag
+	@IDBookTag INT	
+AS 
+BEGIN 
+	SELECT 
+		* 
+	FROM 
+			BookTag
+	WHERE 
+		IDBookTag = @IDBookTag
+END
+
+GO
+
+CREATE PROCEDURE selectBookTags
+AS
+BEGIN 
+SELECT * FROM BookTag
+END
+GO
+
+
+
+
+CREATE PROCEDURE createAuthor
+	@AuthorName NVARCHAR (50),
+	@IDAuthor INT OUTPUT
+AS 
+BEGIN                 
+	INSERT INTO Author VALUES(@AuthorName)
+	SET @IDAuthor = SCOPE_IDENTITY()
+END
+GO
+
+CREATE PROCEDURE updateAuthor
+	@AuthorName NVARCHAR (50),
+	@IDAuthor INT
+	 
+AS 
+BEGIN 
+	UPDATE Author SET 
+	AuthorName = @AuthorName
+	WHERE 
+		IDAuthor = @IDAuthor
+END
+GO
+
+
+CREATE PROCEDURE deleteAuthor
+	@IDAuthor INT	 
+AS 
+BEGIN 
+	DELETE  
+	FROM 
+			Author
+	WHERE 
+		IDAuthor = @IDAuthor
+END
+GO
+
+CREATE PROCEDURE selectAuthor
+	@IDAuthor INT
+AS 
+BEGIN 
+	SELECT 
+		* 
+	FROM 
+		Author
+	WHERE 
+		IDAuthor = @IDAuthor
+END
+GO
+
+CREATE PROCEDURE selectAuthors
+AS
+BEGIN 
+SELECT * FROM Author
+END
+GO
+
+
+--Use Library
+--go
+--CREATE PROCEDURE clearAllData
+--AS
+--BEGIN
+--DELETE FROM BookTag
+--DBCC CHECKIDENT ('BookTag', RESEED, 0)
+--DELETE FROM Book
+--DBCC CHECKIDENT ('Book', RESEED, 0)
+--DELETE FROM Tag_RFID
+--DBCC CHECKIDENT ('Tag_RFID', RESEED, 0)
+--END
+
+--GO
+
+
+
+
+
+
+
